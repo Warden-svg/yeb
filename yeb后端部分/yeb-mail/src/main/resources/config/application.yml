@@ -1,0 +1,42 @@
+server:
+  #端口
+  port: 8082
+
+spring:
+  # 邮件配置
+  mail:
+    #邮件服务器地址
+    host: smtp.163.com
+    #协议
+    protocol: smtp
+    #编码格式
+    default-encoding: utf-8
+    #邮箱STMP授权码,不是邮箱密码
+    password: RVIERCWXYASQYZBM
+    username: kongkaige97@163.com
+    port: 25
+  redis:
+    timeout: 10000ms
+    host: localhost
+    port: 6379
+    database: 0 # 选择哪个默认0库
+    lettuce:
+      pool:
+        max-active: 1024 # 最大连接数，默认 8
+        max-wait: 10000ms # 最大连接阻塞等待时间，单位毫秒，默认 -1
+        max-idle: 200 # 最大空闲连接，默认 8
+        min-idle: 5
+  #rabbitmq配置
+  rabbitmq:
+    #用户名
+    username: guest
+    #密码
+    password: guest
+    #服务器地址
+    host: localhost
+    port: 5672
+    listener:
+      simple:
+        #确认模式
+        acknowledge-mode: manual
+
